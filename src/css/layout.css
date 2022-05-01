@@ -1,0 +1,37 @@
+.tall-block {
+    height: 75%;
+}
+
+.medium-block {
+    height: 50%;
+}
+
+.short-block {
+    height: 25%;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.short-spaced-items div:not(:last-child) {
+    margin-bottom: 3rem;
+}

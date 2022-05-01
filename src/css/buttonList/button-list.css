@@ -1,0 +1,17 @@
+@import url('../keyframes.css');
+
+.list-item-button:hover {
+    cursor: pointer;
+}
+
+.list-item-button-text {
+    font-size: 1.8rem;
+}
+
+.list-item-buff-margin {
+    animation: buff-margin 300ms ease forwards;
+}
+
+.list-item-shrink-margin {
+    animation: shrink-margin 300ms ease forwards;
+}

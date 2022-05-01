@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    font-size: 62.5%;
+    font-family: 'Major Mono Display', monospace;
+    color: white;
+    background-color: black;
+    height: 100%;
+}
+
+body {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    height: calc(100% - 2.4rem);
+}

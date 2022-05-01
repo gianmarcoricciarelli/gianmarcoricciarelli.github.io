@@ -1,0 +1,29 @@
+@keyframes shrink-margin {
+    from {
+        margin-right: 1.5rem;
+    }
+
+    to {
+        margin-right: 0rem;
+    }
+}
+
+@keyframes buff-margin {
+    from {
+        margin-right: 0rem;
+    }
+
+    to {
+        margin-right: 1.5rem;
+    }
+}
+
+@keyframes blinking-cursor {
+    from, to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
