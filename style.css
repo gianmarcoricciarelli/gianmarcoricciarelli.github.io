@@ -2,7 +2,7 @@ body {
     height: 100vh;
     width: 100vw;
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 20px;
 }
 
 h1 {
@@ -83,6 +83,10 @@ h1 {
 .content-section__content {
     width: 100%;
     text-align: right;
+}
+
+.contacts__contact-box {
+    cursor: pointer;
 }
 
 .hidden {

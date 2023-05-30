@@ -21,7 +21,24 @@ const htmlContents = {
         </div>
     `,
     skills: `<p class="content-section__content">Skills</p>`,
-    contacts: `<p class="content-section__content">Contacts</p>`,
+    contacts: `
+        <div class="content-section__content">
+            <p>
+                If you want to reach me, don't be shy!<br /><br />You can send me a
+                <a href="mailto:gianmarcoricciarelli@gmail.com">Email</a>, or find my on:
+            </p>
+            <div>
+                <div id="contacts-linkedin" class="contacts__contact-box">
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    <span>Linkedin</span>
+                </div>
+                <div id="contacts-github" class="contacts__contact-box">
+                    <i class="fa-brands fa-github fa-2xl"></i>
+                    <span>Linkedin</span>
+                </div>
+            </div>
+        </div>
+    `,
 };
 
 for (const item of navigationItems) {
@@ -31,6 +48,12 @@ for (const item of navigationItems) {
         setTimeout(() => {
             document.querySelector('.content-section__content').remove();
             sectionContainer.insertAdjacentHTML('afterbegin', htmlContents[innerText.toLowerCase()]);
+
+            if (innerText.toLowerCase() === 'contacts') {
+                document.querySelector('#contacts-linkedin').addEventListener('click', () => window.open('https://linkedin.com'));
+                document.querySelector('#contacts-github').addEventListener('click', () => window.open('https://github.com/'));
+            }
+
             sectionContainer.classList.remove('hidden');
         }, 300);
     });
