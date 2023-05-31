@@ -22,19 +22,19 @@ const htmlContents = {
     `,
     skills: `<p class="content-section__content">Skills</p>`,
     contacts: `
-        <div class="content-section__content">
+        <div class="content-section__content contacts__container">
             <p>
                 If you want to reach me, don't be shy!<br /><br />You can send me a
                 <a href="mailto:gianmarcoricciarelli@gmail.com">Email</a>, or find my on:
             </p>
-            <div>
+            <div class="contacts__contact-boxes-container">
                 <div id="contacts-linkedin" class="contacts__contact-box">
                     <i class="fa-brands fa-linkedin fa-2xl"></i>
                     <span>Linkedin</span>
                 </div>
                 <div id="contacts-github" class="contacts__contact-box">
                     <i class="fa-brands fa-github fa-2xl"></i>
-                    <span>Linkedin</span>
+                    <span>GitHub</span>
                 </div>
             </div>
         </div>
