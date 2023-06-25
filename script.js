@@ -2,6 +2,7 @@
 
 const navigationBar = document.querySelector('.header__navigation-bar');
 const sections = document.querySelectorAll('.section-container');
+const darkModeButton = document.querySelector('.dark-mode__button');
 
 const sectionObserver = new IntersectionObserver(
     (entries, observer) => {
@@ -16,6 +17,13 @@ const sectionObserver = new IntersectionObserver(
 );
 sections.forEach((section) => sectionObserver.observe(section));
 
+darkModeButton.addEventListener('click', () => {
+    const primaryColor = getComputedStyle(document.body).getPropertyValue('--primary-color');
+    const secondaryColor = getComputedStyle(document.body).getPropertyValue('--secondary-color');
+
+    document.documentElement.style.setProperty('--primary-color', secondaryColor);
+    document.documentElement.style.setProperty('--secondary-color', primaryColor);
+});
 navigationBar.addEventListener('click', ({ target }) => {
     const navigationItem = target.closest('.nav-item');
 
