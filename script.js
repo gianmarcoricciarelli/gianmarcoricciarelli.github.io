@@ -19,10 +19,14 @@ sections.forEach((section) => sectionObserver.observe(section));
 
 darkModeButton.addEventListener('click', () => {
     const primaryColor = getComputedStyle(document.body).getPropertyValue('--primary-color');
+    const primaryColorHover = getComputedStyle(document.body).getPropertyValue('--primary-hover');
     const secondaryColor = getComputedStyle(document.body).getPropertyValue('--secondary-color');
+    const secondaryColorHover = getComputedStyle(document.body).getPropertyValue('--secondary-hover');
 
     document.documentElement.style.setProperty('--primary-color', secondaryColor);
+    document.documentElement.style.setProperty('--primary-hover', secondaryColorHover);
     document.documentElement.style.setProperty('--secondary-color', primaryColor);
+    document.documentElement.style.setProperty('--secondary-hover', primaryColorHover);
 });
 navigationBar.addEventListener('click', ({ target }) => {
     const navigationItem = target.closest('.nav-item');
