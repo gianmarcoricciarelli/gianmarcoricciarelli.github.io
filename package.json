@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "deploy": "build && gh-pages -d dist",
+    "deploy": "pnpm run build && gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
