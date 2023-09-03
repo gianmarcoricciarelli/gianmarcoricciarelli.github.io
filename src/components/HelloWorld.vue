@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <p class="p-8">{{ message }}</p>
+    <p v-t="'hello'"></p>
 </template>
 
 <style scoped></style>
