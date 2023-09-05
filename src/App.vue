@@ -1,9 +1,13 @@
 <script setup lang="ts">
-    import HelloWorld from './components/HelloWorld.vue'
+    import NavBar from './components/NavBar.vue';
+    import ContentContainer from './components/ContentContainer.vue';
+    import FooterContainer from './components/FooterContainer.vue';
 </script>
 
 <template>
-    <HelloWorld message="Hello World" :value="1" />
+    <div class="flex h-screen flex-col justify-between px-5 py-4">
+        <NavBar />
+        <ContentContainer />
+        <FooterContainer />
+    </div>
 </template>
-
-<style scoped></style>
