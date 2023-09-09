@@ -1,17 +1,18 @@
 <script lang="ts" setup>
-import { Ref, computed, inject, ref } from 'vue';
+import { computed, inject, ref } from 'vue';
+import { modeKey } from './provideKeys';
 
-const darkModeSelected = inject<Ref<boolean>>('darkModeSelected');
+const mode = inject(modeKey);
 const transitionForward = ref(false);
 
 const buttonClasses = computed<Record<string, boolean>>(() => {
-    if (darkModeSelected?.value) {
+    if (mode?.value === 'light') {
         return {
             '-translate-x-full': transitionForward.value,
-            'bg-slate-50': !darkModeSelected.value,
-            'bg-slate-800': darkModeSelected.value,
-            'border-slate-900': !darkModeSelected.value,
-            'border-slate-100': darkModeSelected.value,
+            'bg-slate-50': true,
+            'bg-slate-800': false,
+            'border-slate-900': true,
+            'border-slate-100': false,
             'left-0': !transitionForward.value,
             'left-full': transitionForward.value,
         };
@@ -19,24 +20,24 @@ const buttonClasses = computed<Record<string, boolean>>(() => {
 
     return {
         '-translate-x-full': transitionForward.value,
-        'bg-slate-50': true,
-        'bg-slate-800': false,
-        'border-slate-900': true,
-        'border-slate-100': false,
+        'bg-slate-50': false,
+        'bg-slate-800': true,
+        'border-slate-900': false,
+        'border-slate-100': true,
         'left-0': !transitionForward.value,
         'left-full': transitionForward.value,
     };
 });
 const containerClasses = computed<Record<string, boolean>>(() => ({
-    'bg-slate-300': !transitionForward.value,
+    'bg-slate-200': !transitionForward.value,
     'bg-slate-700': transitionForward.value,
 }));
 
 function onClickHandler() {
     transitionForward.value = !transitionForward.value;
 
-    if (darkModeSelected?.value) {
-        darkModeSelected.value = !darkModeSelected.value;
+    if (mode?.value !== undefined) {
+        mode.value = mode?.value === 'light' ? 'dark' : 'light';
     }
 }
 </script>

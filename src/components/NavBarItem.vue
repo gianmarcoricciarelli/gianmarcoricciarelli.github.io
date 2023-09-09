@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { Sections } from '../types';
+
 const props = defineProps<{
-    readonly label: string;
+    readonly label: Sections;
 }>();
 
-defineEmits<{ (e: 'navBarItemClicked', label: string): void }>();
+defineEmits<{ (e: 'navBarItemClicked', label: Sections): void }>();
 </script>
 
 <template>

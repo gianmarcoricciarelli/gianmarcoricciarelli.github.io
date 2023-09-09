@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import { inject } from 'vue';
 import NavBarItem from './NavBarItem.vue';
+import { Sections } from '../types';
+import { selectedSectionKey } from './provideKeys';
 
-const navBarItems: string[] = ['home', 'experiences', 'about', 'contacts'];
+const navBarItems: Sections[] = ['home', 'experiences', 'about', 'contacts'];
 
-function onNavBarItemClicked(clickedLabel: string): void {
-    console.log(clickedLabel);
+const selectedSection = inject(selectedSectionKey);
+
+function onNavBarItemClicked(clickedLabel: Sections): void {
+    if (selectedSection?.value !== undefined) {
+        selectedSection.value = clickedLabel;
+    }
 }
 </script>
 
