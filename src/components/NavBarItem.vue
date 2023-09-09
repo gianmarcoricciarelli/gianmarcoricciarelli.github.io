@@ -1,9 +1,9 @@
 <script setup lang="ts">
-    const props = defineProps<{
-        readonly label: string;
-    }>();
+const props = defineProps<{
+    readonly label: string;
+}>();
 
-    defineEmits<{ (e: 'navBarItemClicked', label: string): void }>();
+defineEmits<{ (e: 'navBarItemClicked', label: string): void }>();
 </script>
 
 <template>
