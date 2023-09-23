@@ -18,7 +18,7 @@ function onNavBarItemClicked(clickedLabel: Sections): void {
 </script>
 
 <template>
-    <div class="flex justify-between">
+    <div class="flex items-center justify-between">
         <LanguageSelection />
         <ToggleButton />
     </div>
