@@ -1,5 +1,7 @@
 export const it = {
-    experiences: 'Esperienze',
     about: 'Biografia',
     contacts: 'Contatti',
+    experiences: 'Esperienze',
+    language: 'Lingua',
+    theme: 'Tema',
 };

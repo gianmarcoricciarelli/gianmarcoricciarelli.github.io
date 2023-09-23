@@ -5,7 +5,6 @@ import { modeKey, selectedSectionKey } from './components/provideKeys';
 import ContentContainer from './components/ContentContainer.vue';
 import FooterContainer from './components/FooterContainer.vue';
 import NavBar from './components/NavBar.vue';
-import ToggleButton from './components/ToggleButton.vue';
 
 const mode: Ref<Mode> = ref('light');
 provide(modeKey, mode);
@@ -35,9 +34,6 @@ const computedClasses = computed<Record<string, boolean>>(() => {
 <template>
     <div class="flex h-screen flex-col justify-between px-5 py-4 transition-all duration-300" :class="computedClasses">
         <div class="flex flex-col gap-1">
-            <div class="flex justify-end">
-                <ToggleButton />
-            </div>
             <NavBar />
         </div>
         <ContentContainer :section="selectedSection" />

@@ -5,7 +5,7 @@ import { it } from './it';
 export const i18n = createI18n({
     legacy: false,
     availableLocales: ['it', 'en'],
-    locale: 'it',
+    locale: 'en',
     fallbackLocale: 'en',
     messages: {
         en,

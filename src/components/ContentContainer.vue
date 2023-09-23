@@ -7,7 +7,9 @@ defineProps<{
 </script>
 
 <template>
-    <p>
-        {{ section }}
-    </p>
+    <div class="flex flex-col items-center justify-center">
+        <p>
+            {{ section }}
+        </p>
+    </div>
 </template>
