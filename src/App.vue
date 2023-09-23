@@ -32,7 +32,7 @@ const computedClasses = computed<Record<string, boolean>>(() => {
 </script>
 
 <template>
-    <div class="flex h-screen flex-col justify-between px-5 py-4 transition-all duration-300" :class="computedClasses">
+    <div class="flex h-[100dvh] flex-col justify-between px-5 py-4 transition-all duration-300" :class="computedClasses">
         <div class="flex flex-col gap-1">
             <NavBar />
         </div>
